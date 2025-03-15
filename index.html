@@ -12,6 +12,13 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
+
+	<head>
+	    <script type="text/javascript" async
+	        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+	    </script>
+	</head>
+	
 	<body class="is-preload">
 
 		<!-- Wrapper -->
@@ -25,7 +32,7 @@
 						<div class="content">
 							<div class="inner">
 								<h1>Kunwar Abhikeern</h1>
-								<p>Computational Matter Scientist</p>
+								<p>Computational Material Scientist</p>
 							</div>
 						</div>
 						<nav>
@@ -86,6 +93,11 @@
 							<article id="work">
 								<h2 class="major">Work</h2>
 
+								<!-- Workflow -->
+								<h3>Wrokflow to get phonon properties</h3>
+								<a href="#phonon-workflow"><img src="images/phonon_workflow.png" alt="Phonon Transport" class="clickable-image" /></a>
+
+
 								<!-- First Research Topic -->
 								<h3>Graphene with layers</h3>
 								<a href="#graphene-layers"><img src="images/graphical_abstract_P1.jpg" alt="Phonon Transport" class="clickable-image" /></a>
@@ -100,6 +112,22 @@
 							</article>
 
 							<!-- Detailed Sections for Each Topic -->
+							<article id="phonon-workflow">
+								<h2 class="major">Graphene with Layers</h2>
+								<p><article id="phonon-workflow">
+								    <h2 class="major">Graphene with Layers</h2>
+								    <p>
+								        The workflow for computing phonon properties using spectral energy density (SED) analysis begins by defining the unit cell and atomic structure, which is then used to build the simulation cell.
+								        Allowed wave vectors \( \mathbf{k} \) are specified before performing quasi-harmonic lattice dynamics (LD) calculations using **GULP** or **Phonopy** to obtain wave vectors, frequencies, and mode shapes (eigenvectors).
+								        Molecular dynamics (MD) simulations are then run in **LAMMPS** to generate atomic positions and velocities.
+								        The eigenvectors are projected onto atomic positions and velocities to obtain the normal mode coordinates \( \mathbf{q} \), which are then used to compute the spectral energy density \( \phi \).
+								        Lorentzian fitting of \( \phi \) extracts the phonon lifetimes \( \tau \) and peak frequencies \( \omega_0 \), along with thermal conductivity \( \kappa \).
+								        Since the Boltzmann Transport Equation (BTE) requires \( \tau \), this completes the computational workflow for phonon transport analysis.
+								    </p>
+								</article>
+								</p>
+							</article>
+						
 							<article id="graphene-layers">
 								<h2 class="major">Graphene with Layers</h2>
 								<p>Details about phonon transport in multilayer graphene...</p>
