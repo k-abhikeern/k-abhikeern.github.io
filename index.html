@@ -11,12 +11,11 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
 
-	<head>
-	    <script type="text/javascript" async
-	        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
-	    </script>
+		<!-- Math symbols -->
+		<script type="text/javascript" async
+	        	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+	    	</script>
 	</head>
 	
 	<body class="is-preload">
@@ -113,10 +112,10 @@
 
 							<!-- Detailed Sections for Each Topic -->
 							<article id="phonon-workflow">
-								<h2 class="major">Workflow to get phonon properties</h2>
+								<h2 class="major">Workflow to get <br> phonon properties</h2>
 								    <p>
 								        The workflow for computing phonon properties using spectral energy density (SED) analysis begins by defining the unit cell and atomic structure, which is then used to build the simulation cell.
-								        Allowed wave vectors $\mathbf{k}$ are specified before performing quasi-harmonic lattice dynamics (LD) calculations using GULP or Phonopy to obtain wave vectors, frequencies, and mode shapes (eigenvectors).
+								        Allowed wave vectors \( \mathbf{k} \) are specified before performing quasi-harmonic lattice dynamics (LD) calculations using GULP or Phonopy to obtain wave vectors, frequencies, and mode shapes (eigenvectors).
 								        Molecular dynamics (MD) simulations are then run in LAMMPS to generate atomic positions and velocities.
 								        The eigenvectors are projected onto atomic positions and velocities to obtain the normal mode coordinates \( \mathbf{q} \), which are then used to compute the spectral energy density \( \phi \).
 								        Lorentzian fitting of \( \phi \) extracts the phonon lifetimes \( \tau \) and peak frequencies \( \omega_0 \), along with thermal conductivity \( \kappa \).
