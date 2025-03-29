@@ -96,6 +96,10 @@
 								<h3>Workflow to get phonon properties</h3>
 								<a href="#phonon-workflow"><img src="images/phonon_workflow.png" alt="Phonon Transport" class="clickable-image" /></a>
 
+								<!-- mg2si -->
+								<h3>SNAP potential for Mg2Si(x)Sn(1-x)</h3>
+								<a href="#mg2si"><img src="images/mg2si.png" alt="SNAP potential for Mg2Si(x)Sn(1-x)" class="clickable-image" /></a>
+
 
 								<!-- First Research Topic -->
 								<h3>Graphene with layers</h3>
@@ -121,6 +125,17 @@
 								        Lorentzian fitting of \( \phi \) extracts the phonon lifetimes \( \tau \) and peak frequencies \( \omega_0 \), along with thermal conductivity \( \kappa \).
 								        Since the Boltzmann Transport Equation (BTE) requires \( \tau \), this completes the computational workflow for phonon transport analysis.
 								    </p>
+							</article>
+
+							<article id="mg2si">
+								<h2 class="major">SNAP potential for Mg2Si(x)Sn(1-x)</h2>
+								<p>The development of a SNAP-based potential for Mg₂SiₓSn₁₋ₓ begins with DFT calculations using Quantum ESPRESSO to generate training data, including energies, 
+									forces, and stresses for different atomic configurations. The extracted data is then processed using Python (NumPy, Pandas, ASE) and formatted for LAMMPS.
+									Next, the SNAP potential is parameterized by fitting bispectrum components using LAMMPS and Python-based optimization (SciPy, scikit-learn, SNAPfit scripts) 
+									to minimize errors relative to DFT results. The potential is validated through MD simulations in LAMMPS, phonon calculations in Phonopy/GULP, and structural 
+									analysis using Matplotlib/VMD to ensure accuracy in predicting lattice parameters, elastic constants, and phonon dispersion. Finally, the trained potential 
+									is deployed for large-scale simulations in LAMMPS, investigating thermal and mechanical properties, defect dynamics, and thermoelectric performance, with 
+									visualization in OVITO.</p>
 							</article>
 						
 							<article id="graphene-layers">
