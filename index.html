@@ -142,9 +142,9 @@
 									elements (Mg and Si in this case), the radial cutoff distance (typically ~5.0 Å), the angular resolution parameter `twojmax` (usually 6–8), 
 									and weighting factors for fitting to energy, force, and stress data. Once the bispectrum features are generated, a linear least-squares regression 
 									is performed (usually ridge regression with regularization) to determine the optimal SNAP coefficients that minimize the error between predicted 
-									and DFT reference values. This results in a trained potential file (`snap_model.snap`) and corresponding parameter file (`snapparam.out`). 
+									and DFT reference values. This results in a trained potential file (`snap-model.snap`) and corresponding parameter file (`snapparam.out`). 
 									The quality of the model is then validated on a test set by comparing predicted vs. DFT energy, force, and stress values using metrics such as RMSE. 
-									Further validation may involve running LAMMPS simulations (with `pair_style snap`) to compute material properties like 
+									Further validation may involve running LAMMPS simulations (with `pair-style snap`) to compute material properties like 
 									phonon spectra (via LAMMPS + Phonopy), elastic constants, or thermal conductivity using equilibrium or non-equilibrium MD. Throughout this process,
 									the key tools include: structure generation software (ASE, pymatgen), DFT codes (VASP, QE), FitSNAP for feature computation and training, and LAMMPS 
 									for deployment. Proper data management, hyperparameter tuning (e.g., twojmax, regularization strength), and cross-validation are critical to ensure 
