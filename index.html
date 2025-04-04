@@ -98,7 +98,7 @@
 
 								<!-- mg2si -->
 								<h3>SNAP potential for Mg2Si(x)Sn(1-x)</h3>
-								<a href="#mg2si"><img src="images/mg2si.png" alt="SNAP potential for Mg2Si(x)Sn(1-x)" class="clickable-image" /></a>
+								<a href="#mg2si"><img src="images/snap.png" alt="SNAP potential for Mg2Si(x)Sn(1-x)" class="clickable-image" /></a>
 
 
 								<!-- First Research Topic -->
@@ -129,13 +129,26 @@
 
 							<article id="mg2si">
 								<h2 class="major">SNAP potential for Mg2Si(x)Sn(1-x)</h2>
-								<p>The development of a SNAP-based potential for Mg₂SiₓSn₁₋ₓ begins with DFT calculations using Quantum ESPRESSO to generate training data, including energies, 
-									forces, and stresses for different atomic configurations. The extracted data is then processed using Python (NumPy, Pandas, ASE) and formatted for LAMMPS.
-									Next, the SNAP potential is parameterized by fitting bispectrum components using LAMMPS and Python-based optimization (SciPy, scikit-learn, SNAPfit scripts) 
-									to minimize errors relative to DFT results. The potential is validated through MD simulations in LAMMPS, phonon calculations in Phonopy/GULP, and structural 
-									analysis using Matplotlib/VMD to ensure accuracy in predicting lattice parameters, elastic constants, and phonon dispersion. Finally, the trained potential 
-									is deployed for large-scale simulations in LAMMPS, investigating thermal and mechanical properties, defect dynamics, and thermoelectric performance, with 
-									visualization in OVITO.</p>
+								<p>To build a Spectral Neighbor Analysis Potential (SNAP) for a material system like Mg₂Si, one begins by generating a diverse and representative dataset
+									of atomic structures that includes not just the pristine bulk phase but also strained configurations, surfaces, point defects
+									(such as Mg and Si vacancies or interstitials), thermally perturbed snapshots from ab initio molecular dynamics, and possibly doped or alloyed
+									configurations if applicable. These structures are typically created using tools like ASE (Atomic Simulation Environment), pymatgen, or VESTA, 
+									and must cover a broad configurational space to ensure that the resulting potential can generalize well. For each of these atomic configurations, 
+									high-accuracy quantum mechanical calculations are performed using Density Functional Theory (DFT) with packages such as VASP, Quantum ESPRESSO, or GPAW.
+									The DFT output must include total energies, atomic forces, and stress tensors for every structure. These serve as the reference data for training the
+									SNAP model. Next, the bispectrum components that describe each atom's local environment are computed based on a hyperspherical harmonics expansion, 
+									which encodes geometric information into invariant descriptors. This is done using the FitSNAP software, a Python-based interface that works with LAMMPS
+									and is specifically designed for training and applying SNAP potentials. A typical FitSNAP training input includes definitions for 
+									elements (Mg and Si in this case), the radial cutoff distance (typically ~5.0 Å), the angular resolution parameter `twojmax` (usually 6–8), 
+									and weighting factors for fitting to energy, force, and stress data. Once the bispectrum features are generated, a linear least-squares regression 
+									is performed (usually ridge regression with regularization) to determine the optimal SNAP coefficients that minimize the error between predicted 
+									and DFT reference values. This results in a trained potential file (`snap_model.snap`) and corresponding parameter file (`snapparam.out`). 
+									The quality of the model is then validated on a test set by comparing predicted vs. DFT energy, force, and stress values using metrics such as RMSE. 
+									Further validation may involve running LAMMPS simulations (with `pair_style snap`) to compute material properties like 
+									phonon spectra (via LAMMPS + Phonopy), elastic constants, or thermal conductivity using equilibrium or non-equilibrium MD. Throughout this process,
+									the key tools include: structure generation software (ASE, pymatgen), DFT codes (VASP, QE), FitSNAP for feature computation and training, and LAMMPS 
+									for deployment. Proper data management, hyperparameter tuning (e.g., twojmax, regularization strength), and cross-validation are critical to ensure 
+									a robust and transferable potential capable of accurately simulating Mg₂Si under various conditions.</p>
 							</article>
 						
 							<article id="graphene-layers">
