@@ -1,0 +1,470 @@
+<!DOCTYPE HTML>
+<!--
+-->
+<html>
+	<head>
+		<title>kunwarabhikeern</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+		<!-- Math symbols -->
+		<script type="text/javascript" async
+	        	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+	    	</script>
+	</head>
+	
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="logo">
+							<span class="icon fa-gem"></span>
+						</div>
+						<div class="content">
+							<div class="inner">
+								<h1>Kunwar Abhikeern</h1>
+								<p>Computational Material Scientist</p>
+							</div>
+						</div>
+						<nav>
+							<ul>
+								<li><a href="#intro">Intro</a></li>
+								<li><a href="#work">Work</a></li>
+								<li><a href="#cv">CV</a></li>
+								<li><a href="#tools">Tools</a></li>
+								
+								<li>
+								<a href="https://scholar.google.com/citations?hl=en&user=wPATps0AAAAJ" target="_blank">
+									<i class="fas fa-graduation-cap"></i>
+								</a>
+								</li>
+
+								<!--<li><a href="#elements">Elements</a></li>-->
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Intro -->
+							<article id="intro">
+							    <h2 class="major">Intro</h2>
+							    
+							    <!-- Profile Image -->
+							    <span class="image main"><img src="images/mypic.jpg" alt="Kunwar Abhikeern" /></span>
+							    
+							    <!-- Research Focus -->
+							    <p>
+							        My research focuses on understanding phonons and electron-phonon interactions in 2D materials, 
+							        with applications in thermal transport, computational materials science, and machine learning-driven material discovery.
+							    </p>
+							    
+							    <!-- Educational Background -->
+							    <h3>Education</h3>
+							    <ul>
+							        <li><strong>Ph.D.</strong> in Mechanical Engineering, <br> <em>IIT Bombay (2019-2024)</em></li>
+							        <li><strong>M.Tech</strong> in Nanotechnology, <br> <em>IIT Roorkee (2015-2017)</em></li>
+							        <li><strong>B.Tech</strong> in Mechanical Engineering, <br> <em>UPTU (2010-2014)</em></li>
+							    </ul>
+							
+							    <!-- Hobbies & Interests -->
+							    <h3>Hobbies & Interests</h3>
+							    <ul>							        
+							        <li>Reading about scientific advancements & space exploration</li>							        							        
+							    </ul>
+							
+							    <!-- Clickable Email Link -->
+							    <h3>Contact</h3>
+							    <p><a href="mailto:kunwarabhikeern@gmail.com">kunwarabhikeern@gmail.com</a></p>
+
+							    <!-- Calendly inline widget begin -->
+							    <div class="calendly-inline-widget" data-url="https://calendly.com/kunwarabhikeern/30min" style="min-width:320px;height:700px;"></div>
+							    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+							    <!-- Calendly inline widget end -->
+							</article>
+
+
+						<!-- Work -->
+							<article id="work">
+								<h2 class="major">Work</h2>
+
+								<!-- Workflow -->
+								<h3>Workflow to get phonon properties</h3>
+								<a href="#phonon-workflow"><img src="images/phonon_workflow.png" alt="Phonon Transport" class="clickable-image" /></a>
+
+								<!-- mg2si -->
+								<h3>SNAP potential for Mg2Si(x)Sn(1-x)</h3>
+								<a href="#mg2si"><img src="images/snap.png" alt="SNAP potential for Mg2Si(x)Sn(1-x)" class="clickable-image" /></a>
+
+
+								<!-- First Research Topic -->
+								<h3>Graphene with layers</h3>
+								<a href="#graphene-layers"><img src="images/graphical_abstract_P1.jpg" alt="Phonon Transport" class="clickable-image" /></a>
+
+								<!-- Second Research Topic -->
+								<h3>Graphene with grain boundaries</h3>
+								<a href="#graphene-gb"><img src="images/graphical_abstract_P2.jpg" alt="ML in Materials" class="clickable-image" /></a>
+
+								<!-- Third Research Topic -->
+								<h3>Graphene with strain, ripples, and curvatures</h3>
+								<a href="#graphene-strain"><img src="images/graphical_abstract_P3.jpg" alt="Thermal Transport" class="clickable-image" /></a>
+
+								<!-- Thesis -->
+								<h3>Thesis</h3>
+								<a href="#thesis"><img src="images/graphical_abstract_thesis.png" alt="Thesis" class="clickable-image" /></a>
+									
+							</article>
+
+							<!-- Detailed Sections for Each Topic -->
+							<article id="phonon-workflow">
+								<h2 class="major">Workflow to get <br> phonon properties</h2>
+								    <p>
+								        The workflow for computing phonon properties using spectral energy density (SED) analysis begins by defining the unit cell and atomic structure, which is then used to build the simulation cell.
+								        Allowed wave vectors \( \mathbf{k} \) are specified before performing quasi-harmonic lattice dynamics (LD) calculations using GULP or Phonopy to obtain wave vectors, frequencies, and mode shapes (eigenvectors).
+								        Molecular dynamics (MD) simulations are then run in LAMMPS to generate atomic positions and velocities.
+								        The eigenvectors are projected onto atomic positions and velocities to obtain the normal mode coordinates \( \mathbf{q} \), which are then used to compute the spectral energy density \( \phi \).
+								        Lorentzian fitting of \( \phi \) extracts the phonon lifetimes \( \tau \) and peak frequencies \( \omega_0 \), along with thermal conductivity \( \kappa \).
+								        Since the Boltzmann Transport Equation (BTE) requires \( \tau \), this completes the computational workflow for phonon transport analysis.
+								    </p>
+							</article>
+
+							<article id="mg2si">
+								<h2 class="major">SNAP potential for Mg2Si(x)Sn(1-x)</h2>
+								<p>To build a Spectral Neighbor Analysis Potential (SNAP) for a material system like Mg₂Si, one begins by generating a diverse and representative dataset
+									of atomic structures that includes not just the pristine bulk phase but also strained configurations, surfaces, point defects
+									(such as Mg and Si vacancies or interstitials), thermally perturbed snapshots from ab initio molecular dynamics, and possibly doped or alloyed
+									configurations if applicable. These structures are typically created using tools like ASE (Atomic Simulation Environment), pymatgen, or VESTA, 
+									and must cover a broad configurational space to ensure that the resulting potential can generalize well. For each of these atomic configurations, 
+									high-accuracy quantum mechanical calculations are performed using Density Functional Theory (DFT) with packages such as VASP, Quantum ESPRESSO, or GPAW.
+									The DFT output must include total energies, atomic forces, and stress tensors for every structure. These serve as the reference data for training the
+									SNAP model. Next, the bispectrum components that describe each atom's local environment are computed based on a hyperspherical harmonics expansion, 
+									which encodes geometric information into invariant descriptors. This is done using the FitSNAP software, a Python-based interface that works with LAMMPS
+									and is specifically designed for training and applying SNAP potentials. A typical FitSNAP training input includes definitions for 
+									elements (Mg and Si in this case), the radial cutoff distance (typically ~5.0 Å), the angular resolution parameter `twojmax` (usually 6–8), 
+									and weighting factors for fitting to energy, force, and stress data. Once the bispectrum features are generated, a linear least-squares regression 
+									is performed (usually ridge regression with regularization) to determine the optimal SNAP coefficients that minimize the error between predicted 
+									and DFT reference values. This results in a trained potential file (`snap-model.snap`) and corresponding parameter file (`snapparam.out`). 
+									The quality of the model is then validated on a test set by comparing predicted vs. DFT energy, force, and stress values using metrics such as RMSE. 
+									Further validation may involve running LAMMPS simulations (with `pair-style snap`) to compute material properties like 
+									phonon spectra (via LAMMPS + Phonopy), elastic constants, or thermal conductivity using equilibrium or non-equilibrium MD. Throughout this process,
+									the key tools include: structure generation software (ASE, pymatgen), DFT codes (VASP, QE), FitSNAP for feature computation and training, and LAMMPS 
+									for deployment. Proper data management, hyperparameter tuning (e.g., twojmax, regularization strength), and cross-validation are critical to ensure 
+									a robust and transferable potential capable of accurately simulating Mg₂Si under various conditions.</p>
+							</article>
+						
+							<article id="graphene-layers">
+								<h2 class="major">Graphene with Layers</h2>
+								<p>Details about phonon transport in multilayer graphene...</p>
+							</article>
+
+							<article id="graphene-gb">
+								<h2 class="major">Graphene with Grain Boundaries</h2>
+								<p>Exploration of how grain boundaries affect thermal and electronic properties...</p>
+							</article>
+
+							<article id="graphene-strain">
+								<h2 class="major">Graphene with Strain, Ripples, and Curvatures</h2>
+								<p>Understanding the impact of mechanical deformations on graphene’s transport properties...</p>
+							</article>
+
+						<article id="thesis">
+								<h2 class="major">Thesis</h2>
+								<p>During my PhD, I conducted four key studies to advance the understanding of thermal transport in graphene and 2D materials. First, I investigated the thermal conductivity (TC) of pristine single-layer graphene (SLG), AB-stacked bilayer graphene (AB-BLG), and twisted bilayer graphene (tBLG) using both nonequilibrium molecular dynamics (NEMD) and spectral energy density (SED)-based normal mode decomposition (NMD), revealing that tBLG exhibits lower phonon group velocities and lifetimes, which explains its reduced TC compared to SLG and AB-BLG. Second, I analyzed polycrystalline graphene (PC-G) with various grain boundary tilt angles, demonstrating that TC strongly depends on tilt orientation and is not correlated with phonon density of states or average lifetimes, and I proposed statistical measures to characterize phonon transport based on group velocity and lifetime distributions. Third, I examined the effect of uniaxial strain on SLG and found that strain alters the phonon dispersion—especially the ZA mode—causing a shift from quadratic to linear behavior, and reduces phonon group velocities while leaving lifetimes mostly unchanged, thereby impacting TC. Finally, I explored thermal transport in 2D anharmonic solids using the Fermi–Pasta–Ulam (FPU)-β model for the first time, employing both Green-Kubo and NMD methods to demonstrate the role of nonlinear interactions, with TC showing logarithmic divergence with system size due to size-dependent phonon lifetimes and velocities. Together, these studies offer deep insights into phonon behavior and heat conduction mechanisms in both realistic and idealized 2D systems.</p>
+								<!-- Link to download CV -->
+    						<p><a href="docs/Final_thesis_Kunwar_Abhikeern_184106014.pdf" target="_blank" class="button">Download CV (PDF)</a></p>
+							</article>
+
+
+						<!-- CV -->
+						<article id="cv">
+							<h2 class="major">cv</h2>
+							<span class="image main"><img src="images/mypic.jpg" alt="" /></span>
+							<p>Detailed CV</p>
+							<p>If your browser cannot support embedded links, you can download a copy of the CV here.<p>	
+							<!-- Link to download CV -->
+    						<p><a href="docs/CV_Abhikeern.pdf" target="_blank" class="button">Download CV (PDF)</a></p>
+							<!-- Embedded PDF Viewer -->
+							<iframe src="docs/CV_Abhikeern.pdf" width="100%" height="600px"></iframe>	
+						</article>
+
+						<!-- Tools -->
+							<article id="tools">
+							    <h2 class="major">Tools</h2>
+							    <span class="image main"><img src="images/tools.png" alt="" /></span>
+							    <p><strong>MD</strong> - LAMMPS, DESMOND</p>
+							    <p><strong>LD</strong> - GULP</p>
+							    <p><strong>DFT</strong> - Quantum Espresso, VASP, CP2K</p>
+							    <p><strong>ML</strong> - SNAP</p>
+							</article>
+
+						
+
+						<!-- Elements -->
+							<article id="elements">
+								<h2 class="major">Elements</h2>
+
+								<section>
+									<h3 class="major">Text</h3>
+									<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
+									This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
+									This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
+									<hr />
+									<h2>Heading Level 2</h2>
+									<h3>Heading Level 3</h3>
+									<h4>Heading Level 4</h4>
+									<h5>Heading Level 5</h5>
+									<h6>Heading Level 6</h6>
+									<hr />
+									<h4>Blockquote</h4>
+									<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
+									<h4>Preformatted</h4>
+									<pre><code>i = 0;
+
+while (!deck.isInOrder()) {
+    print 'Iteration ' + i;
+    deck.shuffle();
+    i++;
+}
+
+print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
+								</section>
+
+								<section>
+									<h3 class="major">Lists</h3>
+
+									<h4>Unordered</h4>
+									<ul>
+										<li>Dolor pulvinar etiam.</li>
+										<li>Sagittis adipiscing.</li>
+										<li>Felis enim feugiat.</li>
+									</ul>
+
+									<h4>Alternate</h4>
+									<ul class="alt">
+										<li>Dolor pulvinar etiam.</li>
+										<li>Sagittis adipiscing.</li>
+										<li>Felis enim feugiat.</li>
+									</ul>
+
+									<h4>Ordered</h4>
+									<ol>
+										<li>Dolor pulvinar etiam.</li>
+										<li>Etiam vel felis viverra.</li>
+										<li>Felis enim feugiat.</li>
+										<li>Dolor pulvinar etiam.</li>
+										<li>Etiam vel felis lorem.</li>
+										<li>Felis enim et feugiat.</li>
+									</ol>
+									<h4>Icons</h4>
+									<ul class="icons">
+										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+										<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+									</ul>
+
+									<h4>Actions</h4>
+									<ul class="actions">
+										<li><a href="#" class="button primary">Default</a></li>
+										<li><a href="#" class="button">Default</a></li>
+									</ul>
+									<ul class="actions stacked">
+										<li><a href="#" class="button primary">Default</a></li>
+										<li><a href="#" class="button">Default</a></li>
+									</ul>
+								</section>
+
+								<section>
+									<h3 class="major">Table</h3>
+									<h4>Default</h4>
+									<div class="table-wrapper">
+										<table>
+											<thead>
+												<tr>
+													<th>Name</th>
+													<th>Description</th>
+													<th>Price</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>Item One</td>
+													<td>Ante turpis integer aliquet porttitor.</td>
+													<td>29.99</td>
+												</tr>
+												<tr>
+													<td>Item Two</td>
+													<td>Vis ac commodo adipiscing arcu aliquet.</td>
+													<td>19.99</td>
+												</tr>
+												<tr>
+													<td>Item Three</td>
+													<td> Morbi faucibus arcu accumsan lorem.</td>
+													<td>29.99</td>
+												</tr>
+												<tr>
+													<td>Item Four</td>
+													<td>Vitae integer tempus condimentum.</td>
+													<td>19.99</td>
+												</tr>
+												<tr>
+													<td>Item Five</td>
+													<td>Ante turpis integer aliquet porttitor.</td>
+													<td>29.99</td>
+												</tr>
+											</tbody>
+											<tfoot>
+												<tr>
+													<td colspan="2"></td>
+													<td>100.00</td>
+												</tr>
+											</tfoot>
+										</table>
+									</div>
+
+									<h4>Alternate</h4>
+									<div class="table-wrapper">
+										<table class="alt">
+											<thead>
+												<tr>
+													<th>Name</th>
+													<th>Description</th>
+													<th>Price</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>Item One</td>
+													<td>Ante turpis integer aliquet porttitor.</td>
+													<td>29.99</td>
+												</tr>
+												<tr>
+													<td>Item Two</td>
+													<td>Vis ac commodo adipiscing arcu aliquet.</td>
+													<td>19.99</td>
+												</tr>
+												<tr>
+													<td>Item Three</td>
+													<td> Morbi faucibus arcu accumsan lorem.</td>
+													<td>29.99</td>
+												</tr>
+												<tr>
+													<td>Item Four</td>
+													<td>Vitae integer tempus condimentum.</td>
+													<td>19.99</td>
+												</tr>
+												<tr>
+													<td>Item Five</td>
+													<td>Ante turpis integer aliquet porttitor.</td>
+													<td>29.99</td>
+												</tr>
+											</tbody>
+											<tfoot>
+												<tr>
+													<td colspan="2"></td>
+													<td>100.00</td>
+												</tr>
+											</tfoot>
+										</table>
+									</div>
+								</section>
+
+								<section>
+									<h3 class="major">Buttons</h3>
+									<ul class="actions">
+										<li><a href="#" class="button primary">Primary</a></li>
+										<li><a href="#" class="button">Default</a></li>
+									</ul>
+									<ul class="actions">
+										<li><a href="#" class="button">Default</a></li>
+										<li><a href="#" class="button small">Small</a></li>
+									</ul>
+									<ul class="actions">
+										<li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
+										<li><a href="#" class="button icon solid fa-download">Icon</a></li>
+									</ul>
+									<ul class="actions">
+										<li><span class="button primary disabled">Disabled</span></li>
+										<li><span class="button disabled">Disabled</span></li>
+									</ul>
+								</section>
+
+								<section>
+									<h3 class="major">Form</h3>
+									<form method="post" action="#">
+										<div class="fields">
+											<div class="field half">
+												<label for="demo-name">Name</label>
+												<input type="text" name="demo-name" id="demo-name" value="" placeholder="Jane Doe" />
+											</div>
+											<div class="field half">
+												<label for="demo-email">Email</label>
+												<input type="email" name="demo-email" id="demo-email" value="" placeholder="jane@untitled.tld" />
+											</div>
+											<div class="field">
+												<label for="demo-category">Category</label>
+												<select name="demo-category" id="demo-category">
+													<option value="">-</option>
+													<option value="1">Manufacturing</option>
+													<option value="1">Shipping</option>
+													<option value="1">Administration</option>
+													<option value="1">Human Resources</option>
+												</select>
+											</div>
+											<div class="field half">
+												<input type="radio" id="demo-priority-low" name="demo-priority" checked>
+												<label for="demo-priority-low">Low</label>
+											</div>
+											<div class="field half">
+												<input type="radio" id="demo-priority-high" name="demo-priority">
+												<label for="demo-priority-high">High</label>
+											</div>
+											<div class="field half">
+												<input type="checkbox" id="demo-copy" name="demo-copy">
+												<label for="demo-copy">Email me a copy</label>
+											</div>
+											<div class="field half">
+												<input type="checkbox" id="demo-human" name="demo-human" checked>
+												<label for="demo-human">Not a robot</label>
+											</div>
+											<div class="field">
+												<label for="demo-message">Message</label>
+												<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
+											</div>
+										</div>
+										<ul class="actions">
+											<li><input type="submit" value="Send Message" class="primary" /></li>
+											<li><input type="reset" value="Reset" /></li>
+										</ul>
+									</form>
+								</section>
+
+							</article>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<p class="copyright">&copy; Kunwar Abhikeern. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+					</footer>
+
+			</div>
+
+		<!-- BG -->
+			<div id="bg"></div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

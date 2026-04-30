@@ -1,0 +1,17 @@
+EDIT → STAGE → COMMIT → PUSH → GITHUB PAGES LIVE
+
+# check current repo status (what changed, what is untracked)
+git status
+
+# stage all changes (prepare files for saving)
+git add .
+
+# save snapshot of changes with message
+git commit -m "your message here"
+
+# upload local commits to GitHub (updates website)
+git push origin main
+
+# get latest changes from GitHub (if repo updated elsewhere)
+git pull
+
