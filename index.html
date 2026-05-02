@@ -55,6 +55,8 @@
 		<!-- Main -->
 		<div id="main">
 
+			<!-- ===================================================================================================================================================================================== -->
+
 			<!-- Intro -->
 			<article id="intro">
 				<h2 class="major">Intro</h2>
@@ -63,7 +65,7 @@
 				<span class="image main"><img src="images/mypic.jpg" alt="Kunwar Abhikeern" /></span>
 
 				<!-- Research Focus -->
-				<p style="text-align: justify;"></p>
+				<p style="text-align: justify;">
 				Computational materials researcher specializing in atomistic modeling and data-driven materials
 				discovery. Experienced in molecular dynamics (MD), density functional theory (DFT), and machine
 				learning interatomic potentials (MLIP) for property prediction, phase stability, and
@@ -140,7 +142,7 @@
 
 			</article>
 
-
+			<!-- ===================================================================================================================================================================================== -->
 			<!-- Work -->
 			<article id="work">
 				<h2 class="major">Work</h2>
@@ -181,7 +183,7 @@
 			<!-- Detailed Sections for Each Topic -->
 			<article id="phonon-workflow">
 				<h2 class="major">Workflow to get <br> phonon properties</h2>
-				<p>
+				<p style="text-align: justify;">
 					The workflow for computing phonon properties using spectral energy density (SED) analysis begins by
 					defining the unit cell and atomic structure, which is then used to build the simulation cell.
 					Allowed wave vectors \( \mathbf{k} \) are specified before performing quasi-harmonic lattice
@@ -283,14 +285,211 @@
 						(PDF)</a></p>
 			</article>
 
-
+			<!-- ===================================================================================================================================================================================== -->
 			<!-- Blog -->
 			<article id="blog">
+				<!-- Science -->
+				<h3>Science</h3>
+				<a href="#blog-science"><img src="images/phonon_workflow.png" alt="Blog Science"
+						class="clickable-image" /></a>
+			</article>
+
+			<!-- Detailed Sections for Each Topic -->
+			<article id="blog-science">
+				<h2 class="major">How GPU came into picture</h2>
 				<p>
-					Here I will write about my blogs. The first one will about the History of GPU and how it came?
+					### **Chapter: When One Brain Was Not Enough**
+
+					There was a time, not too long ago, when every computer in the world relied on a single, powerful
+					thinker. This thinker was called the CPU, the Central Processing Unit. It was the brain of the
+					machine, and for decades, engineers believed that if they could just make this brain faster,
+					everything else would follow.
+
+					People like Gordon Moore, working at Intel, observed that computers seemed to double in power every
+					couple of years. It felt like magic. Every new generation of processors ran faster, handled more
+					tasks, and made the impossible seem routine. Software grew bolder because hardware kept up.
+
+					But nature, as it often does, had its limits.
+
+					As engineers pushed CPUs to run faster, the chips began to heat up like overworked engines. Power
+					consumption soared. The elegant curve of progress began to flatten. It was as if the single thinker
+					at the center of the computer had reached exhaustion. No matter how much you urged it, it could not
+					think faster without burning itself out.
+
+					And so, the question quietly emerged:
+
+					*What if the problem was not how fast one brain could think… but how many brains could think
+					together?*
+
+					---
+
+					### **The Artists Who Changed Computing**
+
+					While scientists wrestled with slowing CPUs, another world was racing ahead — the world of graphics.
+
+					Video games were becoming richer, more detailed, more alive. Companies like NVIDIA and ATI
+					Technologies were trying to solve a different challenge entirely: how to draw millions of pixels on
+					a screen, dozens of times every second.
+
+					Each pixel was simple. It needed color, light, maybe a shadow. But there were millions of them. And
+					each one could be computed independently.
+
+					This was the crucial realization.
+
+					Instead of one powerful thinker, what if you had thousands of small ones, each handling a tiny piece
+					of the picture?
+
+					Thus, the GPU — the Graphics Processing Unit — was born. Not as a rival to the CPU, but as a
+					specialist. A painter made of many hands.
+
+					---
+
+					### **A Radical Idea**
+
+					At first, GPUs were just artists. They painted images, rendered scenes, and powered games. But deep
+					inside, something more profound was happening.
+
+					The GPU was not just drawing pictures. It was performing the same calculation over and over again,
+					incredibly fast, across thousands of tiny cores. It was a machine built for repetition, for rhythm,
+					for parallelism.
+
+					And then, in 2006, NVIDIA made a bold move.
+
+					They introduced CUDA — the Compute Unified Device Architecture.
+
+					With CUDA, they told the world:
+
+					*“This machine you thought was just for graphics… can think.”*
+
+					Suddenly, scientists, engineers, and programmers could write code that ran directly on the GPU. Not
+					for images, but for mathematics, physics, and data.
+
+					The artist had become a mathematician.
+
+					---
+
+					### **When Science Discovered Parallel Thinking**
+
+					Once the door was opened, entire fields rushed in.
+
+					Physicists began simulating atoms and molecules with unprecedented scale. Climate scientists modeled
+					weather patterns across continents. Biologists folded proteins and studied life at the molecular
+					level.
+
+					All of these problems shared a hidden structure: they could be broken into many small, similar
+					pieces.
+
+					And GPUs were perfect for that.
+
+					It was as if, instead of asking one genius to solve a problem, you gathered ten thousand students
+					and gave each a small part. The answer arrived not through brilliance alone, but through
+					coordination.
+
+					---
+
+					### **The Age of Intelligence**
+
+					Then came a revolution that changed everything again.
+
+					Machine learning.
+
+					Researchers like Geoffrey Hinton and teams across the world began building neural networks — systems
+					inspired by the human brain. These networks required enormous amounts of computation, especially
+					during training.
+
+					At companies like OpenAI, models grew larger and more ambitious. The calculations involved were
+					staggering — billions upon billions of operations.
+
+					The CPU could not keep up.
+
+					But the GPU could.
+
+					Because deep learning, at its core, is built on matrix multiplication — the very kind of repetitive,
+					parallel work GPUs were born to do.
+
+					Training that once took months could now be done in days. Sometimes hours.
+
+					The GPU had found its true calling.
+
+					---
+
+					### **The Machines Behind the Magic**
+
+					Today, a modern GPU like the one you are using — the H100 — is not just a chip. It is a city.
+
+					Inside it are thousands of cores working in parallel. Specialized units called Tensor Cores handle
+					matrix operations with incredible efficiency. High Bandwidth Memory feeds data at breathtaking
+					speeds.
+
+					It is not designed to think like a human.
+
+					It is designed to think like a crowd.
+
+					---
+
+					### **Not Alone in the Race**
+
+					Although NVIDIA led this transformation, they were not alone.
+
+					AMD built powerful GPUs of their own and developed alternative ecosystems. Intel entered the space
+					with new architectures, seeking to unify CPU and GPU computing. Google even designed custom chips
+					called TPUs, tailored specifically for machine learning.
+
+					But NVIDIA did something unique.
+
+					They did not just build hardware. They built an ecosystem — CUDA, libraries, tools — that made it
+					easy for developers to stay and build upon their platform.
+
+					In technology, this often matters more than raw power.
+
+					---
+
+					### **The Cost of Power**
+
+					Of course, the journey was not without challenges.
+
+					GPUs were difficult to program in the beginning. Data movement between CPU and GPU became a
+					bottleneck. Not every problem could be parallelized. And these machines consumed enormous amounts of
+					power.
+
+					Even today, engineers continue to wrestle with these limitations.
+
+					But the direction is clear.
+
+					---
+
+					### **The Real Lesson**
+
+					If you step back from all the details — the chips, the companies, the code — a deeper story emerges.
+
+					The rise of the GPU is not just about faster computers.
+
+					It is about a shift in how we think about problems.
+
+					Once, we believed in the power of a single, ever-faster mind.
+
+					Now, we understand the strength of many minds working together.
+
+					---
+
+					### **A Thought to Carry Forward**
+
+					Some problems in life cannot be solved by thinking harder.
+
+					They are solved by thinking together.
+
+					That is the philosophy embedded in every GPU.
+
+					And now, sitting at your machine, running your code, you are not just using a computer.
+
+					You are conducting an orchestra of thousands of tiny thinkers, all working in harmony, turning ideas
+					into reality.
+
 				</p>
 			</article>
 
+
+			<!-- ===================================================================================================================================================================================== -->
 			<!-- Tools -->
 			<article id="tools">
 				<h2 class="major">Tools</h2>
@@ -304,6 +503,7 @@
 				<p><strong>Soft skills</strong>: Communication and team collaboration</p>
 			</article>
 
+			<!-- ===================================================================================================================================================================================== -->
 
 			<!-- Elements -->
 			<article id="elements">
